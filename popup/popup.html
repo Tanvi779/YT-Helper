@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YT Helper</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <span class="logo">🎬</span>
+      <span class="title">YT Helper</span>
+      <div class="header-actions">
+        <button id="refresh">🔄</button>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <div id="insights" class="tab-content active">
+
+        <!-- TITLE -->
+        <div class="card">
+          <p class="label">Title</p>
+          <p id="videoTitle">Loading...</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">👁️ <span id="views">--</span></div>
+        </div>
+
+        <!-- CHANNEL -->
+        <div class="card">
+          <p class="label">Channel</p>
+          <p id="channel">--</p>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+          <button id="primaryBtn">Refresh</button>
+          <button id="focusBtn">Focus Mode</button>
+        </div>
+
+        <!-- TIMESTAMPS -->
+        <div class="card">
+          <p class="label">Timestamps</p>
+          <ul id="timestamps">
+            <li>Loading...</li>
+          </ul>
+        </div>
+
+        <!-- NOTES -->
+        <div class="card">
+          <p class="label">Notes</p>
+          <textarea 
+            id="notes" 
+            rows="3" 
+            placeholder="Write notes for this video..."
+          ></textarea>
+          <button id="saveNote">Save Note</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      YT Helper • v1.0
+    </footer>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
