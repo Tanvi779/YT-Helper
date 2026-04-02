@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         channelEl.textContent = res.channel;
         currentVideoId = res.videoId;
 
-        timestampsEl.innerHTML = "";
+        timestampsEl.textContent = "";  
 
         res.timestamps.forEach((t) => {
           const li = document.createElement("li");
