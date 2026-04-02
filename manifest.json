@@ -1,0 +1,23 @@
+{"manifest_version": 3,
+  "name": "YT Helper",
+  "version": "1.0",
+  "description": "YouTube productivity extension",
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "permissions": ["activeTab", "tabs", "storage"],
+
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
